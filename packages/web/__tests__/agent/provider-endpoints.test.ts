@@ -72,8 +72,8 @@ describe('getProviderApiType', () => {
     expect(getProviderApiType('requesty')).toBe('openai-completions');
   });
 
-  it('reports UberLLM as openai-completions', () => {
-    expect(getProviderApiType('uberllm')).toBe('openai-completions');
+  it('reports MartLLM as openai-completions', () => {
+    expect(getProviderApiType('martllm')).toBe('openai-completions');
   });
 });
 
@@ -84,9 +84,9 @@ describe('Requesty preset', () => {
   });
 });
 
-describe('UberLLM preset', () => {
-  it('uses the UberLLM endpoint and its own API key env var', () => {
-    expect(getDefaultBaseUrl('uberllm')).toBe('https://api.uberllm.dev/v1');
-    expect(getApiKeyEnvVar('uberllm')).toBe('UBERLLM_API_KEY');
+describe('MartLLM preset', () => {
+  it('uses the MartLLM endpoint and its own API key env var', () => {
+    expect(getDefaultBaseUrl('martllm')).toBe('https://api.martllm.com/v1');
+    expect(getApiKeyEnvVar('martllm')).toBe('MARTLLM_API_KEY');
   });
 });
